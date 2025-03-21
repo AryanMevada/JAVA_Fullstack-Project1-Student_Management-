@@ -1,14 +1,7 @@
 package jdbc_code2;
 import java.sql.*;
 import java.util.*;
-
-
-
 public class Student_Data_Management {
-
-
-
-
     static Scanner sc = new Scanner(System.in);
     public static String dbname = "student_mangement";
     public static String tbname = "studnet_data";
@@ -18,8 +11,7 @@ public class Student_Data_Management {
     static String password = "1234";
 
     public static void CreateDb() {
-        
-
+       
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
             Statement stmt = conn.createStatement();
             String query = "CREATE DATABASE " + dbname;
@@ -31,8 +23,6 @@ public class Student_Data_Management {
     }
 
     public static void CreateTb() {
-        
-
         try (Connection conn = DriverManager.getConnection(url + dbname, user, password)) {
             Statement stmt = conn.createStatement();
             String query = "CREATE TABLE IF NOT EXISTS " +tbname + " ("
@@ -67,7 +57,13 @@ public class Student_Data_Management {
 
         System.out.print("Contact No: ");
         studentData.put("contact", sc.nextLine());
-
+/*String query="Create table "+tbname+"( 
+			 				Std_ENRID SERIAL PRIMARY KEY,"
+							+"Std_ROLLNO Int,"
+							+"Std_Name Char,"
+							+"Std_Course Varchar(100),"
+			 			+"Std_ContactNo int()" ;
+			*/
         try (Connection conn = DriverManager.getConnection(url + dbname, user, password)) {
             String query = "INSERT INTO " + tbname + " VALUES(?,?,?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(query);
