@@ -2,7 +2,7 @@
 # JDBC Code Project
 
 <p align="center">
-  <img src="Images/project-demo.png" alt="JDBC Demo" width="600"/>
+  <img src="https://github.com/AryanMevada/JAVA_Fullstack-Project1-Student_Management-/blob/main/Screenshot%202025-04-22%20104908.png" alt="JDBC Demo" width="600"/>
 </p>
 
 <p align="center"><b>Figure:</b> Screenshot of JDBC Student Management System</p>
